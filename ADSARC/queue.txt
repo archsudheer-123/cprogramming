@@ -1,0 +1,75 @@
+#include<stdio.h>
+int main()
+{
+    int i,n,ch,v;
+    printf("enter the size of queue:");
+    scanf("%d",&n);
+    if(n<=0)
+    {
+        printf("invalid size\n");
+        return 1;
+    }
+    int queue[n];
+    int f=-1,r=-1;
+    while(1)
+    {
+        printf("\menu\n1.enqueue\n2.dequeue\n3.dispaly\n4.exit\n");
+        printf("enter your choice\n");
+        scanf("%d",&ch);
+        if(ch==1)
+        {
+            if(r==n-1)
+            {
+                printf("queue is full\n");
+            }
+            else
+            {
+                printf("enter the element:");
+                scanf("%d",&v);
+                r=r+1;
+                queue[r]=v;
+                if(f==-1)
+                {
+                    f=0;
+                }
+            }
+        }
+        else if(ch==2)
+        {
+            if(f==-1 || f>r)
+            {
+                printf("queue is empty!\n");
+            }
+            else
+            {
+                printf("deleted %d\n",queue[f]);
+                f=f+1;
+            }
+        }
+        else if(ch==3)
+        {
+            if(f==-1 || f>r)
+            {
+                printf("queue is empty!\n");
+            }
+            else
+            {
+                printf("queue is:");
+                for(i=f;i<=r;i++)
+                {
+                    printf("%d",queue[i]);
+                }
+                printf("\n");
+            }
+        }
+        else if(ch==4)
+        {
+            break;
+        }
+        else
+        {
+            printf("invalid choice!\n");
+        }
+    }
+    return 0;
+}

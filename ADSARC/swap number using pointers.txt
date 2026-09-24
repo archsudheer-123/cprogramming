@@ -1,0 +1,22 @@
+  1 #include <stdio.h>
+  2 void swap(int *a,int *b){
+  3     int temp;
+  4     temp=*a;
+  5     *a=*b;
+  6     *b=temp;
+  7 }
+  8 int main(){
+  9     int a,b;
+ 10     printf("enter the first number:");
+ 11     scanf("%d\n",&a);
+ 12     printf("enter the second number:");
+ 13     scanf("%d\n",&b);
+ 14     printf("before swaping array");
+ 15     printf("a=%d\n",a);
+ 16     printf("b=%d\n",b);
+ 17     swap(&a,&b);
+ 18     printf("after swaping:");
+ 19     printf("a=%d\n",a);
+ 20     printf("b=%d\n",b);
+ 21     return 0;}
+ 22

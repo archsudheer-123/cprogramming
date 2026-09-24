@@ -1,0 +1,23 @@
+  1 #include <stdio.h>
+  2 int main()
+  3 {
+  4  int a, b;
+  5  int *p, *q;
+  6  printf("Enter first number: ");
+  7  scanf("%d", &a);
+  8  printf("Enter second number: ");
+  9  scanf("%d", &b);
+ 10  p = &a;
+ 11  q = &b;
+ 12  if (*p > *q)
+ 13  {
+ 14  printf("\nLargest number = %d", *p);
+ 15  }
+ 16  else
+ 17  {
+ 18  printf("\nLargest number = %d", *q);
+ 19  }
+ 20  return 0;
+ 21 }
+ 22
+~
